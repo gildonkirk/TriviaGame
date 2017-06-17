@@ -83,9 +83,11 @@
 		
 
 	function timesUp(){
+		play = false;
 		$('.answer').remove();
-		$('.')
+		$('.currentQuestion').text('');
 		$('#timer').text("Time's Up!")
+		nextQuestion();
 	}
 
 	
@@ -98,9 +100,9 @@
 	});
 
 	function nextQuestion(){
+		$('#timer').text('');
 		questionCounter ++;
 		$('#questionWrapper').append('<button class="nextQuestion">' + 'Next' +'</button>')
-		console.log(questionCounter);
 	};
 
 	</script>
