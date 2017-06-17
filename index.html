@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Sports Trivia</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>	
@@ -13,51 +14,95 @@
 	<div id="contentWrapper">
   		<h1>Sports Trivia</h1>
 
-  		<div id="questionWrapper">
-  			<button id="start">Start</button>
+  		<div id="questionWrapper"> 			
+  			<button id = "start" class="nextQuestion">Start</button>
   			<p id = "timer"></p>
+  			<h1 id="question"></h1>
+  			<ul>
+  				<li id = "answer1"></li>
+  				<li id = "answer2"></li>
+  				<li id = "answer3"></li>
+  				<li id = "answer4"></li>
+  			</ul>
   		</div>
 
 	</div>
 
 	<script>
 	var questionArray = [
+	// how to assign value of right to one of the answers
 		{
 			question: 'Barry Bonds currently holds the Major League Baseball home run record with how many home runs?',
-			answer1: '762',
+			answerRight: '762',
 			answer2: '750',
 			answer3: '725',
 			answer4: '796'
 		},
 		{
 			question: 'Who is the only athlete to play in a Super Bowl and a World Series?',
-			answer1: 'Deion Sanders',
+			answerRight: 'Deion Sanders',
 			answer2: 'Bo Jackson',
 			answer3: 'Michael Jordan',
 			answer4: 'Brian Jordan'
 		},
 		{
 			question: 'Which country won the 2012 UEFA European Championship?',
-			answer1: 'Spain',
+			answerRight: 'Spain',
 			answer2: 'Netherlands',
 			answer3: 'France',
 			answer4: 'Germany'
 		}
 	];
-	var timer = 31;
+	var timer = 30;
 	var countDisplay = setInterval(countdown, 1000);
+	var play = false;
+	var questionCounter = 0;
+
+	$(document).on('click', '.nextQuestion', function(){
+		$('.nextQuestion').remove();
+		$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
+		$('#answer1').append('<button class="answerRight answer">' + questionArray[questionCounter].answerRight + '</button>');
+		$('#answer2').append('<button class="answer">' + questionArray[questionCounter].answer2 + '</button>');
+		$('#answer3').append('<button class="answer">' + questionArray[questionCounter].answer3 + '</button>');
+		$('#answer4').append('<button class="answer">' + questionArray[questionCounter].answer4 + '</button>');
+		play = true;
+		$('.correct').text('');
+	})
 
 	function countdown(){
-		timer --; 
-		$('#timer').text(timer);
-		if (timer <= 0){
+		if (play === true){
+			timer --; 
+			$('#timer').text(timer);
+			if (timer <= 0){
 			timesUp()
-		}
+			}
+		} else {
+			timer = 30
+		};
 	};
+		
 
 	function timesUp(){
+		$('.answer').remove();
+		$('.')
 		$('#timer').text("Time's Up!")
 	}
+
+	
+	$(document).on('click', '.answerRight', function(){
+		$('#questionWrapper').prepend('<h1 class="correct">' + 'Correct!' + '</h1>');
+		play = false;
+		$('.answer').remove();
+		$('.currentQuestion').text('');
+		nextQuestion();
+	});
+
+	function nextQuestion(){
+		questionCounter ++;
+		$('#questionWrapper').append('<button class="nextQuestion">' + 'Next' +'</button>')
+		console.log(questionCounter);
+	};
+
 	</script>
 </body>
 </html>
