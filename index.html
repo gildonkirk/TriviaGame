@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sports Trivia</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+ 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous">
+  	</script>
+
+	<div id="contentWrapper">
+  		<h1>Sports Trivia</h1>
+
+  		<div id="questionWrapper">
+  			<button id="start">Start</button>
+  			<p id = "timer"></p>
+  		</div>
+
+	</div>
+
+	<script>
+	var questionArray = [
+		{
+			question: 'Barry Bonds currently holds the Major League Baseball home run record with how many home runs?',
+			answer1: '762',
+			answer2: '750',
+			answer3: '725',
+			answer4: '796'
+		},
+		{
+			question: 'Who is the only athlete to play in a Super Bowl and a World Series?',
+			answer1: 'Deion Sanders',
+			answer2: 'Bo Jackson',
+			answer3: 'Michael Jordan',
+			answer4: 'Brian Jordan'
+		},
+		{
+			question: 'Which country won the 2012 UEFA European Championship?',
+			answer1: 'Spain',
+			answer2: 'Netherlands',
+			answer3: 'France',
+			answer4: 'Germany'
+		}
+	];
+	var timer = 31;
+	var countDisplay = setInterval(countdown, 1000);
+
+	function countdown(){
+		timer --; 
+		$('#timer').text(timer);
+		if (timer <= 0){
+			timesUp()
+		}
+	};
+
+	function timesUp(){
+		$('#timer').text("Time's Up!")
+	}
+	</script>
+</body>
+</html>
