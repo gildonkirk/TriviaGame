@@ -53,6 +53,7 @@
 			answer4: 'Germany'
 		}
 	];
+
 	var timer = 30;
 	var countDisplay = setInterval(countdown, 1000);
 	var play = false;
@@ -61,7 +62,6 @@
 	var rightCounter = 0;
 	var wrongCounter = 0;
 	var numberOfQuestions = questionArray.length;
-	console.log(numberOfQuestions);
 
 	$(document).on('click', '.nextQuestion', game)
 
@@ -100,9 +100,10 @@
 		questionCounter ++;
 		console.log(questionCounter);
 		if (questionCounter >= numberOfQuestions){
-		$('.nextQuestion').text('Restart');
-		$('.nextQuestion').addClass('restart');
-		$('.restart').removeClass('nextQuestion');
+			$('#questionWrapper').prepend('<h1 class="scoreboard">' + 'Score: ' + rightCounter + '/' + numberOfQuestions + '</h1>');
+			$('.nextQuestion').text('Restart');
+			$('.nextQuestion').addClass('restart');
+			$('.restart').removeClass('nextQuestion');
 		};
 	};
 	
@@ -146,6 +147,7 @@
 		rightCounter = 0;
 		wrongCounter = 0;
 		questionCounter = 0;
+		$('.scoreboard').remove();
 		$('.restart').remove();
 		game();
 	});
