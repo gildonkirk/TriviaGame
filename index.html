@@ -57,14 +57,24 @@
 	var countDisplay = setInterval(countdown, 1000);
 	var play = false;
 	var questionCounter = 0;
+	var ul = document.querySelector('ul');
+
+
 
 	$(document).on('click', '.nextQuestion', function(){
 		$('.nextQuestion').remove();
 		$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
+	
 		$('#answer1').append('<button class="answerRight answer">' + questionArray[questionCounter].answerRight + '</button>');
 		$('#answer2').append('<button class="answer">' + questionArray[questionCounter].answer2 + '</button>');
 		$('#answer3').append('<button class="answer">' + questionArray[questionCounter].answer3 + '</button>');
 		$('#answer4').append('<button class="answer">' + questionArray[questionCounter].answer4 + '</button>');
+
+		// Randomizes order of buttons
+		for (var i = ul.children.length; i >= 0; i--) {
+			ul.appendChild(ul.children[Math.random() * i | 0]);
+		};
+		
 		play = true;
 		$('.correct').text('');
 	})
