@@ -60,8 +60,11 @@
 	var ul = document.querySelector('ul');
 	var rightCounter = 0;
 	var wrongCounter = 0;
+	var numberOfQuestions = questionArray.length;
+	console.log(numberOfQuestions);
 
 	$(document).on('click', '.nextQuestion', function(){
+		
 		$('.nextQuestion').remove();
 		$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
 	
@@ -90,7 +93,17 @@
 			timer = 30
 		};
 	};
-		
+
+	function gameOver(){
+		questionCounter ++;
+		console.log(questionCounter);
+		if (questionCounter >= numberOfQuestions){
+		$('.nextQuestion').text('Restart');
+		$('.nextQuestion').addClass('restart');
+		$('.restart').removeClass('nextQuestion');
+		};
+	};
+	
 
 	function timesUp(){
 		play = false;
@@ -99,6 +112,7 @@
 		$('.currentQuestion').text('');
 		$('#timer').text("Time's Up!")
 		nextQuestion();
+		gameOver();
 	}
 
 	
@@ -116,18 +130,36 @@
 			wrongCounter ++;
 			nextQuestion();
 			console.log('wrong: ' + wrongCounter);
-		}
+		};
+		gameOver()
 	});
 
 	function nextQuestion(){
 		$('#timer').text('');
-		questionCounter ++;
+		
 		$('#questionWrapper').append('<button class="nextQuestion">' + 'Next' +'</button>')
 	};
 
-	function restart(){
+	$(document).on('click', '.restart', function(){
+		rightCounter = 0;
+		wrongCounter = 0;
+		questionCounter = 0;
+		$('.restart').remove();
+		$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
+	
+		$('#answer1').append('<button class="answerRight answer">' + questionArray[questionCounter].answerRight + '</button>');
+		$('#answer2').append('<button class="answer">' + questionArray[questionCounter].answer2 + '</button>');
+		$('#answer3').append('<button class="answer">' + questionArray[questionCounter].answer3 + '</button>');
+		$('#answer4').append('<button class="answer">' + questionArray[questionCounter].answer4 + '</button>');
 
-	}
+		// Randomizes order of buttons
+		for (var i = ul.children.length; i >= 0; i--) {
+			ul.appendChild(ul.children[Math.random() * i | 0]);
+		};
+
+		play = true;
+		$('.correct').text('');
+	});
 
 	</script>
 </body>
