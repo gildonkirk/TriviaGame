@@ -58,8 +58,8 @@
 	var play = false;
 	var questionCounter = 0;
 	var ul = document.querySelector('ul');
-
-
+	var rightCounter = 0;
+	var wrongCounter = 0;
 
 	$(document).on('click', '.nextQuestion', function(){
 		$('.nextQuestion').remove();
@@ -74,7 +74,7 @@
 		for (var i = ul.children.length; i >= 0; i--) {
 			ul.appendChild(ul.children[Math.random() * i | 0]);
 		};
-		
+
 		play = true;
 		$('.correct').text('');
 	})
@@ -94,6 +94,7 @@
 
 	function timesUp(){
 		play = false;
+		wrongCounter ++;
 		$('.answer').remove();
 		$('.currentQuestion').text('');
 		$('#timer').text("Time's Up!")
@@ -101,12 +102,21 @@
 	}
 
 	
-	$(document).on('click', '.answerRight', function(){
-		$('#questionWrapper').prepend('<h1 class="correct">' + 'Correct!' + '</h1>');
+	$(document).on('click', '.answer', function(){
 		play = false;
 		$('.answer').remove();
 		$('.currentQuestion').text('');
-		nextQuestion();
+		if ($(this).hasClass('answerRight')){
+			$('#questionWrapper').prepend('<h1 class="correct">' + 'Correct!' + '</h1>');			
+			rightCounter ++;			
+			nextQuestion();
+			console.log('right: ' + rightCounter);
+		} else {
+			$('#questionWrapper').prepend('<h1 class="correct">' + 'Incorrect!' + '</h1>');
+			wrongCounter ++;
+			nextQuestion();
+			console.log('wrong: ' + wrongCounter);
+		}
 	});
 
 	function nextQuestion(){
@@ -114,6 +124,10 @@
 		questionCounter ++;
 		$('#questionWrapper').append('<button class="nextQuestion">' + 'Next' +'</button>')
 	};
+
+	function restart(){
+
+	}
 
 	</script>
 </body>
