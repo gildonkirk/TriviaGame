@@ -63,8 +63,22 @@
 	var numberOfQuestions = questionArray.length;
 	console.log(numberOfQuestions);
 
-	$(document).on('click', '.nextQuestion', function(){
-		
+	$(document).on('click', '.nextQuestion', game)
+
+	function countdown(){
+		if (play === true){
+			timer --; 
+			$('#timer').text(timer);
+			if (timer <= 0){
+			timesUp()
+			}
+		} else {
+			timer = 30
+		};
+	};
+
+	function game(){
+			
 		$('.nextQuestion').remove();
 		$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
 	
@@ -80,18 +94,6 @@
 
 		play = true;
 		$('.correct').text('');
-	})
-
-	function countdown(){
-		if (play === true){
-			timer --; 
-			$('#timer').text(timer);
-			if (timer <= 0){
-			timesUp()
-			}
-		} else {
-			timer = 30
-		};
 	};
 
 	function gameOver(){
@@ -110,7 +112,7 @@
 		wrongCounter ++;
 		$('.answer').remove();
 		$('.currentQuestion').text('');
-		$('#timer').text("Time's Up!")
+		$('#questionWrapper').prepend('<h1 class="correct">' + "Time's Up!" + '</h1>');
 		nextQuestion();
 		gameOver();
 	}
@@ -145,20 +147,7 @@
 		wrongCounter = 0;
 		questionCounter = 0;
 		$('.restart').remove();
-		$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
-	
-		$('#answer1').append('<button class="answerRight answer">' + questionArray[questionCounter].answerRight + '</button>');
-		$('#answer2').append('<button class="answer">' + questionArray[questionCounter].answer2 + '</button>');
-		$('#answer3').append('<button class="answer">' + questionArray[questionCounter].answer3 + '</button>');
-		$('#answer4').append('<button class="answer">' + questionArray[questionCounter].answer4 + '</button>');
-
-		// Randomizes order of buttons
-		for (var i = ul.children.length; i >= 0; i--) {
-			ul.appendChild(ul.children[Math.random() * i | 0]);
-		};
-
-		play = true;
-		$('.correct').text('');
+		game();
 	});
 
 	</script>
