@@ -1,0 +1,78 @@
+*{
+	box-sizing: border-box
+}
+
+body {
+	width: 100%;
+	background-image: url("../images/5houses.jpg");
+	background-size: 100%;
+}
+
+.jumbotron {
+	text-align: center;
+	margin: 20px 0 0 0;
+	padding: 1em;
+}
+
+#questionWrapper {
+	background-color: #222222;
+	color: #ffffff;
+	height: 400px;
+}
+
+.gif{
+	width: 358px;
+	margin-left: 34.2%;
+	padding-top: 20px;
+}
+
+#timer {
+	text-align: center;
+	color: #ffffff;
+	font-size: 30pt;
+}
+
+.btn-warning {
+	background-color: #FFDE00;
+	color: #111111;
+}
+
+#question{
+	font-size: 30pt;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.correct{
+	font-size: 30pt;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.nextQuestion {
+	width: 350px;
+	margin-left: 34.6%;
+/*	margin-top: 8px;*/
+}
+
+li {
+	margin: 3px 0;
+}
+
+.answer {
+	width: 350px;
+	margin-left: 34.6%;
+}
+
+/*.list {
+	padding-left: 250px;
+}*/
+
+#start {	
+	width: 350px;
+	margin-left: 34.6%;
+}
+/*.subheading {
+	font-size: 40pt;
+}*/
+
