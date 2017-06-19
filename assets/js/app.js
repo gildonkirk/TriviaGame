@@ -117,7 +117,7 @@ var questionArray = [
 		urlWrong: 'https://media.giphy.com/media/Ipa14FZopE0Vy/giphy.gif'
 	},
 	{
-		question: "How many Sand Snakes are there",
+		question: "How many Sand Snakes are there?",
 		answerRight: "8",
 		answer2: '7',
 		answer3: "3",
@@ -135,7 +135,7 @@ var questionArray = [
 		urlWrong: 'https://media.giphy.com/media/OcVrHw2mcwjxS/giphy.gif'
 	},
 	{
-		question: "Where is Varys originally from",
+		question: "Where is Varys originally from?",
 		answerRight: "Lys",
 		answer2: 'Myr',
 		answer3: "Pentos",
@@ -144,7 +144,7 @@ var questionArray = [
 		urlWrong: 'https://media.giphy.com/media/QnrntWsC4EYwg/giphy.gif'
 	},
 	{
-		question: "What mythical creature, sent by the warlocks of Qarth, almost kills Daenerys",
+		question: "What mythical creature, sent by the warlocks of Qarth, almost kills Daenerys?",
 		answerRight: "Manticore",
 		answer2: 'Wight',
 		answer3: "Giant",
@@ -261,11 +261,11 @@ $(document).on('click', '.answer', function(){
 });
 
 function gifPageRight(){
-	$('#questionWrapper').prepend('<img class= "gif" src=' + questionArray[questionCounter].urlRight + '>')
+	$('#questionWrapper').prepend('<img class= "img-responsive center-block gif" src=' + questionArray[questionCounter].urlRight + '>')
 };
 
 function gifPageWrong(){
-	$('#questionWrapper').prepend('<img class= "gif" src=' + questionArray[questionCounter].urlWrong + '>')
+	$('#questionWrapper').prepend('<img class= "img-responsive center-block gif" src=' + questionArray[questionCounter].urlWrong + '>')
 };
 
 function nextQuestion(){
