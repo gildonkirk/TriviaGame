@@ -13,133 +13,171 @@ var questionArray = [
 		answerRight: 'House Frey',
 		answer2: 'House Bolton',
 		answer3: 'House Arryn',
-		answer4: 'House Martel'
+		answer4: 'House Martel',
+		urlRight: 'https://media.giphy.com/media/X4ibpa3BL9pQY/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/4h2oE2UooT7xu/giphy.gif'
 	},
 	{
 		question: 'Why does Ygritte say Mance Rayder will want to talk to Jon Snow?',
 		answerRight: "Because of Jon's Stark blood",
 		answer2: 'Because Jon is a crow',
 		answer3: 'Because Jon killed Qhorin Halfhand',
-		answer4: 'Because Jon is a fellow deserter'
+		answer4: 'Because Jon is a fellow deserter',
+		urlRight: 'https://media.giphy.com/media/jegNpYuphNAv6/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/NCTbhL8AG2s8g/giphy.gif'
 	},
 	{
 		question: "What does Daenerys Targaryen catapult across Meereen's walls?",
 		answerRight: 'Broken chains',
 		answer2: 'Slave collars',
 		answer3: 'Hands',
-		answer4: 'Heads'
+		answer4: 'Heads',
+		urlRight: 'https://media.giphy.com/media/S6IejbKYDKUYo/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/UL22YqYztgasw/giphy.gif'
 	},
 	{
 		question: "Who killed Beric Dondarrion first?",
 		answerRight: "The Mountain",
 		answer2: 'The Hound',
 		answer3: 'Jaime Lannister',
-		answer4: 'Roose Bolton'
+		answer4: 'Roose Bolton',
+		urlRight: 'https://media.giphy.com/media/13l0x798RdO8Io/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/120VzE7kaALraw/giphy.gif'
 	},
 	{
 		question: "What are House Lannister's words?",
 		answerRight: "Hear me roar!",
 		answer2: 'A Lannister always pays his debts',
 		answer3: 'Ours be the glory',
-		answer4: 'Righteous in wrath'
+		answer4: 'Righteous in wrath',
+		urlRight: 'https://media.giphy.com/media/IUZtGhVO8hZ6w/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/TUrHpFWdAlKSY/giphy.gif'
 	},
 	{
 		question: "What is Sansa Stark's favorite treat?",
 		answerRight: "Lemon Cakes",
 		answer2: 'Lamprey pie',
 		answer3: 'Berry tarts',
-		answer4: 'Tyroshi pears'
+		answer4: 'Tyroshi pears',
+		urlRight: 'https://media.giphy.com/media/d49OokrhFqf1C/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/kmrlRUii2gKic/giphy.gif'
 	},
 	{
 		question: "What is the name of Joffrey's Valyrian steel blade?",
 		answerRight: "Widow's Wail",
 		answer2: 'Heart Eater',
 		answer3: "Lion's Tooth",
-		answer4: 'Dark Sister'
+		answer4: 'Dark Sister',
+		urlRight: 'https://media.giphy.com/media/pFBPXx3fy151S/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/2p6SXq2yhabo4/giphy.gif'
 	},
 	{
 		question: "What are House Greyjoy's Words?",
 		answerRight: "We do not sow",
 		answer2: 'We remember',
 		answer3: "We guard the way",
-		answer4: 'We pay the iron price'
+		answer4: 'We pay the iron price',
+		urlRight: 'https://media.giphy.com/media/3n7PiYYug6vXG/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/UQ7kXcVXeAAMM/giphy.gif'
 	},
 	{
 		question: "Who is Bran Stark named after?",
 		answerRight: "His Uncle",
 		answer2: 'His Grandfather',
 		answer3: "His Father",
-		answer4: 'His Great-Grandfather'
+		answer4: 'His Great-Grandfather',
+		urlRight: 'https://media.giphy.com/media/j7SjfgIXEkaKQ/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/2Q3JJbVuPYCNW/giphy.gif'
 	},
 	{
 		question: "What animal is the Baelish House Sigil?",
 		answerRight: "Mockingbird",
 		answer2: 'Hawk',
 		answer3: "Fox",
-		answer4: 'Snake'
+		answer4: 'Snake',
+		urlRight: 'https://media.giphy.com/media/2FazeUr0xlznK4fvy/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/qzmjxMUa5L6GA/giphy.gif'
 	},
 	{
 		question: "Who has never been named to the small council?",
 		answerRight: "Olenna Tyrell",
 		answer2: 'Renly Baratheon',
 		answer3: "Mace Tyrell",
-		answer4: 'Cersei Lanister'
+		answer4: 'Cersei Lanister',
+		urlRight: 'https://media.giphy.com/media/tdagJVVnJq2FG/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/uugG9vavdgBNu/giphy.gif'
 	},
 	{
 		question: "Who killed Jon Arryn?",
 		answerRight: "Lysa Arryn",
 		answer2: 'Cersei Lannister',
 		answer3: "Petyr Baelish",
-		answer4: 'Jaime Lannister'
+		answer4: 'Jaime Lannister',
+		urlRight: 'https://media.giphy.com/media/11TEBf6JI6XV3q/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/Ipa14FZopE0Vy/giphy.gif'
 	},
 	{
 		question: "How many Sand Snakes are there",
 		answerRight: "8",
 		answer2: '7',
 		answer3: "3",
-		answer4: '5'
+		answer4: '5',
+		urlRight: 'https://media.giphy.com/media/aFeIpyeFsyMWA/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/lD5BglgFZ1DlC/giphy.gif'
 	},
 	{
 		question: "Who has not competed in trial by combat?",
 		answerRight: "Jaime Lannister",
 		answer2: 'The Hound',
 		answer3: "Bronn",
-		answer4: 'Oberyn Martel'
+		answer4: 'Oberyn Martel',
+		urlRight: 'https://media.giphy.com/media/tb9upMVeUYbvO/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/OcVrHw2mcwjxS/giphy.gif'
 	},
 	{
 		question: "Where is Varys originally from",
 		answerRight: "Lys",
 		answer2: 'Myr',
 		answer3: "Pentos",
-		answer4: 'Bravos'
+		answer4: 'Bravos',
+		urlRight: 'https://media.giphy.com/media/YbQF3JE3oKVVu/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/QnrntWsC4EYwg/giphy.gif'
 	},
 	{
 		question: "What mythical creature, sent by the warlocks of Qarth, almost kills Daenerys",
 		answerRight: "Manticore",
 		answer2: 'Wight',
 		answer3: "Giant",
-		answer4: 'Harpy'
+		answer4: 'Harpy',
+		urlRight: 'https://media.giphy.com/media/dlwMJEGkOEaZO/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/XUd34gC4nHtio/giphy.gif'
 	},
 	{
 		question: 'Who says, "Of all the ways I would kill you, poison would be the last"?',
 		answerRight: "Mance Rayder",
 		answer2: 'Cersei Lannister',
 		answer3: "Tyrion Lannister",
-		answer4: 'Walder Frey'
+		answer4: 'Walder Frey',
+		urlRight: 'https://media.giphy.com/media/lIFtNQReDiHF6/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/7f28gOGxAqPCM/giphy.gif'
 	},
 	{
 		question: 'Who says, "What do you know about fear? Fear is for the winter"?',
 		answerRight: "Old Nan",
 		answer2: 'Mance Rayder',
 		answer3: "Greatjon Umber",
-		answer4: 'Tormund Giantsbane'
+		answer4: 'Tormund Giantsbane',
+		urlRight: 'https://media.giphy.com/media/SrnmjIl1lZBN6/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/TAI059LQuwrgk/giphy.gif'
 	},
 	{
 		question: "What family member does the Red Viper seek vengence for?",
 		answerRight: "Sister",
 		answer2: 'Daughter',
 		answer3: "Mother",
-		answer4: 'Wife'
+		answer4: 'Wife',
+		urlRight: 'https://media.giphy.com/media/q6lLXZs037MQM/giphy.gif',
+		urlWrong: 'https://media.giphy.com/media/jLqaTYKX85NMA/giphy.gif'
 	},
 ];
 
@@ -155,8 +193,8 @@ $(document).on('click', '.nextQuestion', game)
 
 function countdown(){
 	if (play === true){
-		timer --; 
 		$('#timer').text(timer);
+		timer --; 		
 		if (timer <= 0){
 		timesUp()
 		}
@@ -165,8 +203,9 @@ function countdown(){
 	};
 };
 
-function game(){			
+function game(){
 	$('.nextQuestion').remove();
+	play = true;
 	$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
 
 	$('#answer1').append('<button class="answerRight answer btn btn-warning">' + questionArray[questionCounter].answerRight + '</button>');
@@ -177,8 +216,8 @@ function game(){
 	for (var i = ul.children.length; i >= 0; i--) {
 		ul.appendChild(ul.children[Math.random() * i | 0]);
 	};
-	play = true;
-	$('.correct').text('');
+	
+	$('.correct').remove();
 	$('.gif').remove();	
 };
 
