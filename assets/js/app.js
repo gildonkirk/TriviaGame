@@ -206,6 +206,7 @@ function countdown(){
 function game(){
 	$('.nextQuestion').remove();
 	play = true;
+	$('#question').after('<p id = "timer"></p>');
 	$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
 
 	$('#answer1').append('<button class="answerRight answer btn btn-warning">' + questionArray[questionCounter].answerRight + '</button>');
@@ -244,6 +245,7 @@ function timesUp(){
 
 
 $(document).on('click', '.answer', function(){
+	$('#timer').remove();
 	play = false;
 	$('.answer').remove();
 	$('.currentQuestion').text('');
