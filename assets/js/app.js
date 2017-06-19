@@ -114,7 +114,7 @@ var questionArray = [
 		answer3: "Petyr Baelish",
 		answer4: 'Jaime Lannister',
 		urlRight: 'https://media.giphy.com/media/11TEBf6JI6XV3q/giphy.gif',
-		urlWrong: 'https://media.giphy.com/media/Ipa14FZopE0Vy/giphy.gif'
+		urlWrong: 'https://media.giphy.com/media/JJHRh7lXHMgBW/giphy.gif'
 	},
 	{
 		question: "How many Sand Snakes are there?",
@@ -132,7 +132,7 @@ var questionArray = [
 		answer3: "Bronn",
 		answer4: 'Oberyn Martel',
 		urlRight: 'https://media.giphy.com/media/tb9upMVeUYbvO/giphy.gif',
-		urlWrong: 'https://media.giphy.com/media/OcVrHw2mcwjxS/giphy.gif'
+		urlWrong: 'https://media.giphy.com/media/riromhomYiFqw/giphy.gif'
 	},
 	{
 		question: "Where is Varys originally from?",
