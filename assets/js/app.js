@@ -224,7 +224,7 @@ function game(){
 function gameOver(){
 	questionCounter ++;
 	if (questionCounter >= numberOfQuestions){
-		$('#questionWrapper').prepend('<h1 class="scoreboard">' + 'Score: ' + rightCounter + '/' + numberOfQuestions + '</h1>');
+		$('#questionWrapper').prepend('<h1 class="scoreboard">' + 'Quiz Over! Score: ' + rightCounter + '/' + numberOfQuestions + '</h1>');
 		$('.nextQuestion').text('Restart');
 		$('.nextQuestion').addClass('restart');
 		$('.restart').removeClass('nextQuestion');
