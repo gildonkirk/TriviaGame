@@ -118,7 +118,7 @@ li {
     font-size: 30pt;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 994px) {
 	#questionWrapper {
 		padding: 0 100px;
 	}
@@ -136,9 +136,19 @@ li {
 	}
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
 	#questionWrapper {
 		padding: 0 30px;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	#questionWrapper {
+		padding: 0 5px;
+	}
+
+	.btn {
+		font-size: 15pt;
 	}
 }
 
