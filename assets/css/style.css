@@ -9,8 +9,8 @@ body {
 }
 
 .container-fluid {
-	padding-right: 100px;
-	padding-left: 100px;
+	padding-right: 2%;
+	padding-left: 2%;
 }
 
 .header {
@@ -63,6 +63,14 @@ body {
 	margin-left: 40%;
 }
 
+.scoreboard {
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'Muli', sans-serif;
+	font-size: 30pt;
+	color: #ffffff;
+}
+
 .btn-warning {
 	background-color: #FFDE00;
 	color: #111111;
@@ -70,7 +78,7 @@ body {
 
 #question {
 	font-size: 30pt;
-	margin: 20px 0;
+	margin: 20px 0 15px 0;
 	text-align: center;
 	font-family: 'Muli', sans-serif;
 }
@@ -104,10 +112,34 @@ li {
 
 #start {	
 	width: 100%;
-	margin-top: 185px;
+	margin-top: 175px;
     padding: 45px 0;
     font-family: 'Muli', sans-serif;
     font-size: 30pt;
+}
+
+@media screen and (max-width: 750px) {
+	#questionWrapper {
+		padding: 0 100px;
+	}
+
+	#timer, #question, .scoreboard, .correct {
+		font-size: 20pt;
+	}
+
+	.btn {
+		font-size: 16pt;
+	}
+
+	.answer, .restart {
+		height: 45px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#questionWrapper {
+		padding: 0 30px;
+	}
 }
 
 font-family: 'Muli', sans-serif;
