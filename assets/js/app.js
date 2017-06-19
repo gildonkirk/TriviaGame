@@ -104,7 +104,7 @@ var questionArray = [
 		answer2: 'Renly Baratheon',
 		answer3: "Mace Tyrell",
 		answer4: 'Cersei Lanister',
-		urlRight: 'https://media.giphy.com/media/tdagJVVnJq2FG/giphy.gif',
+		urlRight: 'https://media.giphy.com/media/uugG9vavdgBNu/giphy.gif',
 		urlWrong: 'https://media.giphy.com/media/uugG9vavdgBNu/giphy.gif'
 	},
 	{
