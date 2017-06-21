@@ -195,7 +195,7 @@ function countdown(){
 	if (play === true){
 		$('#timer').text(timer);
 		timer --; 		
-		if (timer <= 0){
+		if (timer < 0){
 		timesUp()
 		}
 	} else {
@@ -206,7 +206,7 @@ function countdown(){
 function game(){
 	$('.nextQuestion').remove();
 	play = true;
-	$('#question').after('<p id = "timer"></p>');
+	$('#question').after('<p id = "timer">30</p>');
 	$('#question').append(questionArray[questionCounter].question).addClass('currentQuestion');
 
 	$('#answer1').append('<button class="answerRight answer btn btn-warning">' + questionArray[questionCounter].answerRight + '</button>');
@@ -241,6 +241,7 @@ function timesUp(){
 	$('#questionWrapper').prepend('<h1 class="correct">' + "Time's Up! Answer: " + questionArray[questionCounter].answerRight + '</h1>');
 	nextQuestion();
 	gameOver();
+	$('#timer').remove();
 }
 
 
